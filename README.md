@@ -1,4 +1,4 @@
-#Twitch Audio-Only Restreamer
+# Twitch Audio-Only Restreamer
 
 This script takes a Twitch.tv username and restreams the audio on a local Icecast2 server, while the stream is online.
 Every 60 seconds, the availability of the Twitch stream is checked and the audio stream started accordingly.
@@ -15,7 +15,7 @@ Can be easily modified to be usable for other streaming sites as well.
 - [ffmpeg](https://ffmpeg.org/): Converting the stream to MP3 and provide a source for the Icecast2 server
 - [icecast2](http://icecast.org/): Making the audio stream available on the network
 
-##Setup
+## Setup
 
 1. Install the required packages:
 ```bash
@@ -41,9 +41,10 @@ sudo cp twitch-audio-restream.sh /opt/twitch-audio-restream/
 ```
 
 6. Start either script directly or systemd service
-`./twitch-audio-restream [Twitch username] [icecast source password]`
 
-or
+   `./twitch-audio-restream.sh [Twitch username] [icecast source password]`
 
-`sudo service twitch-audio-restream start`
+   or
+
+   `sudo service twitch-audio-restream start`
 
