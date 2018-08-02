@@ -1,0 +1,13 @@
+[Unit]
+Description=twitch-audio-restream daemon
+After=network.target
+After=icecast2.service
+
+[Service]
+Type=simple
+ExecStart=/opt/twitch-audio-restream/twitch-audio-restream.sh [twitch username] [icecast source password]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
